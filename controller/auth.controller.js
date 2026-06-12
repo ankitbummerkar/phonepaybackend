@@ -22,7 +22,7 @@ export const signup = async (req, res) => {
 
     const upiId = `${name.toLowerCase().replace(/\s/g, "")}@gratitudewallet`;
 
-    const paymentUrl = `phone-pay-clone-virid.vercel.app/pay/${upiId}`;
+    const paymentUrl = `https://phone-pay-clone-virid.vercel.app/pay/${upiId}`;
 
     const qrCode = await QRCode.toDataURL(paymentUrl);
 
