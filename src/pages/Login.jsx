@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export default function Login() {
@@ -14,7 +14,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/auth/login",
+        "https://phonepaybackend-yapz.onrender.com/auth/login",
         {
           email,
           password,
@@ -207,6 +207,23 @@ export default function Login() {
                 >
                   Login
                 </button>
+
+                {/* Login Link */}
+
+                <p className="text-center text-gray-600 mt-3">
+                  New here?{" "}
+                  <Link
+                    to="/"
+                    className="
+                  ml-2
+                  text-blue-600
+                  font-semibold
+                  hover:underline
+                  "
+                  >
+                    Signup
+                  </Link>
+                </p>
               </div>
             </form>
           </div>

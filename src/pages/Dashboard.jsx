@@ -28,7 +28,7 @@ export default function Dashboard() {
   const logout = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/auth/logout",
+        "https://phonepaybackend-yapz.onrender.com/auth/logout",
         {},
         {
           withCredentials: true,

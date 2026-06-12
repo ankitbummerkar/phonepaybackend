@@ -19,7 +19,7 @@ export default function PayPage() {
       setLoading(true);
 
       await axios.post(
-        "http://localhost:5000/payment/send-money-upi",
+        "https://phonepaybackend-yapz.onrender.com/payment/send-money-upi",
         {
           receiverUpiId: id,
           amount,

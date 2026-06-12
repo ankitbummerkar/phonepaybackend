@@ -18,7 +18,7 @@ export default function AddMoney() {
       setLoading(true);
 
       await axios.post(
-        "http://localhost:5000/payment/add-money",
+        "https://phonepaybackend-yapz.onrender.com/payment/add-money",
         {
           amount,
         },
